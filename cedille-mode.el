@@ -65,6 +65,7 @@
 (defvar cedille-mode-sep "§")
 
 (autoload 'cedille-mode "cedille-mode" "Major mode for editing cedille files ." t)
+;;;###autoload
 (add-to-list 'auto-mode-alist (cons "\\.ced\\'" 'cedille-mode))
 
 (let ((se-path (file-name-as-directory (concat cedille-path-el "se-mode"))))
