@@ -755,6 +755,7 @@ occurrences, then do so."
   "Starts the Cedille process"
   (se-inf-start (start-process "cedille-mode" "*cedille-mode*" cedille-program-name "+RTS" "-K1000000000" "-RTS")))
 
+;;;###autoload
 (se-create-mode "cedille" nil
   "Major mode for Cedille files."
 
@@ -787,8 +788,10 @@ occurrences, then do so."
         cedille-mode-parent-buffer (current-buffer))
   (se-navigation-mode 1))
 
+;;;###autoload
 (modify-coding-system-alist 'file "\\.ced\\'" 'utf-8)
 
+;;;###autoload
 (quail-define-package "Cedille" "UTF-8" "δ" t ; guidance
 		      "Cedille input method."
 		      nil nil nil nil nil nil t) ; maximum-shortest
@@ -804,5 +807,6 @@ occurrences, then do so."
           ("\\rho" "ρ") ("\\theta" "θ") ("\\epsilon" "ε") ("\\phi" "φ"); add some more of these
  ))
 
+;;;###autoload
 (provide 'cedille-mode)
 ;;; cedille-mode.el ends here
