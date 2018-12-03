@@ -76,7 +76,9 @@
   (add-to-list 'load-path cedille-mode-library-path)
   (add-to-list 'load-path (concat cedille-mode-library-path "json.el")))
 
+;;;###autoload
 (require 'se)
+
 (require 'cedille-mode-library)
 
 (defun cedille-mode-current-buffer-base-name()
@@ -106,6 +108,7 @@ Defaults to `error'."
 
 (require 'se-mode)
 (require 'se-markup)
+;;;###autoload
 (eval-when-compile (require 'se-macros))
 
 (defvar cedille-mode-version "1.0"
